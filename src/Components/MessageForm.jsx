@@ -23,7 +23,7 @@ const MessageForm = (props) => {
     }
 
     return (
-    <form className='messages-form' onSubmit={handleSubmit}>
+    <form className='message-form' onSubmit={handleSubmit}>
         <input 
         className='message-input'
         placeholder='Send a message...'
@@ -41,10 +41,10 @@ const MessageForm = (props) => {
             multiple={false}
             id='upload-button'
             style={{display: 'none'}}
-            onChange={handleUpload}
+            onChange={handleUpload.bind(this)}
         />
         <button type='submit' className='send-button'>
-            <SendOutlined className='send-con'/>
+            <SendOutlined className='send-icon'/>
         </button>
     </form>
     )

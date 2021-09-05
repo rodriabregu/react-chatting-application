@@ -8,14 +8,17 @@ const ChatFeed = (props) => {
 
     const renderReadReceipts = (message, isMyMessage) => {
         return chat.people.map((person, index) => person.last_read === message.id && (
+            <>
             <div 
             key={`read_${index}`}
             className='read-receipt'
             style={{
                 float: isMyMessage ? 'right' : 'left',
                 backgroundImage: `url(${person?.person?.avatar})`
-            }}
-            />
+            }}>
+            <span className='name-form-img'>{person?.person.first_name}</span>
+            </div>
+            </>
         ))
     }
 
@@ -43,12 +46,12 @@ const ChatFeed = (props) => {
         })
     }
 
-    if(!chat) return 'Loading...'
+    if(!chat) return <div><h3>Loading...</h3></div>;
 
     return (
         <div className='chat-feed'>
             <div className='chat-title-container'>
-                <div className='chat-title'>{chat.title}</div>
+                <div className='chat-title'>{chat?.title}</div>
                 <div className='chat-subtitle'>
                     {chat.people.map((person) => `${person.person.username}, `)}
                 </div>

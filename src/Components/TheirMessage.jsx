@@ -14,6 +14,7 @@ const TheirMessage = ({ lastMessage, message}) => {
                 <img 
                 src={message.attachments[0].file}
                 alt='message-attachment'
+                className="message-image"
                 style={{marginLeft: isFirtsMessageByUser ? '4px' : '48px'}}
                 />
             )
