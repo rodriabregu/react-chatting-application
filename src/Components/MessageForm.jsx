@@ -9,7 +9,9 @@ const MessageForm = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         const text = value.trim();
-        if(text.length > 0) sendMessage(creds, chatId, {text})
+        if(text.length > 0) {
+        sendMessage(creds, chatId, {text})
+        }
         setValue('');
     }
 
@@ -19,7 +21,7 @@ const MessageForm = (props) => {
     }
 
     const handleUpload = e => {
-        sendMessage(creds, chatId, {files: e.target.value.files, text: ''})
+        sendMessage(creds, chatId, { files: e.target.files, text: '' })
     }
 
     return (
