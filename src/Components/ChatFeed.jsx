@@ -1,5 +1,5 @@
-import MessageForm from "./MessageForm";
 import MyMessage from "./MyMessage";
+import MessageForm from "./MessageForm";
 import TheirMessage from "./TheirMessage";
 
 const ChatFeed = (props) => {
@@ -47,7 +47,7 @@ const ChatFeed = (props) => {
         })
     }
 
-    if(!chat) return <div><h3>Loading...</h3></div>;
+    if(!chat) return <div><h3>&nbsp; Loading...</h3></div>;
 
     return (
         <div className='chat-feed'>

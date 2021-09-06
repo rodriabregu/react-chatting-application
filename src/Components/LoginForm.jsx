@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 import { useState } from 'react';
 
 const projectID = '86e0352a-1fbe-4612-be20-5175b6a8039d';
@@ -17,7 +17,7 @@ const LoginForm = () => {
             localStorage.setItem('password', password)
             window.location.reload();
         } catch (err) {
-            setError('Ops, incorrect credentials.')
+            setError('&nbsp; Ops, incorrect credentials.')
         }
     }
 
