@@ -1,10 +1,12 @@
 import { ChatEngine } from 'react-chat-engine';
 import ChatFeed from './Components/ChatFeed.jsx';
-import LoginForm from './Components/LoginForm'
+import Lobby from './Components/Lobby'
 import './App.css'
 
 const App = () => {
-    if (!localStorage.getItem('username')) return <LoginForm />
+    if (!localStorage.getItem('username')) {
+        return <Lobby />
+    }
 
     return (
         <ChatEngine 

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const projectID = '86e0352a-1fbe-4612-be20-5175b6a8039d';
 
@@ -21,6 +21,16 @@ const LoginForm = () => {
         }
     }
 
+    useEffect(() => {
+        let auth0 = localStorage.getItem('username')
+        let auth1 = localStorage.getItem('password')
+        if(auth0 && auth1 !== null) {
+
+        }
+        
+    }, [])
+
+    console.log('storage',localStorage.getItem('username'))
     return ( 
         <div className='wrapper'>
             <div className='form'>
