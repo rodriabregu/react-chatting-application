@@ -301,3 +301,9 @@
 .name-form-img {
   margin-left: 32px;
 }
+
+.waiting {
+  font-size: 35px;
+  text-align: center;
+  margin-left: 13rem;
+}

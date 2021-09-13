@@ -3,13 +3,12 @@ import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 
 const Lobby = () => {
-
-
     return (
         <>
-            <Route path="/register" component={RegisterForm} />
-            <Route path="/login" component={LoginForm} />
-            <Link to='/register'></Link>
+            <Route exact path="/register" component={RegisterForm} />
+            <Route exact path="/login" component={LoginForm} />
+            <Link to='/register'>Register </Link>
+            <Link to='/login'>Login</Link>
         </>
     )
 }

@@ -1,14 +1,18 @@
 import MyMessage from "./MyMessage";
 import MessageForm from "./MessageForm";
 import TheirMessage from "./TheirMessage";
+import '../App.css';
 
 const ChatFeed = (props) => {
+/*     if (!localStorage.getItem('username')) {
+        return <Lobby />
+    } */
     const { chats, activeChat, userName, messages } = props;
     const chat = chats && chats[activeChat];
 
     const renderReadReceipts = (message, isMyMessage) => {
         return chat.people.map((person, index) => person.last_read === message.id && (
-            <>
+            <div>
             <div 
             key={`read_${index}`}
             className='read-receipt'
@@ -19,7 +23,7 @@ const ChatFeed = (props) => {
             <span className='name-form-img'>{person?.person.first_name}&nbsp;</span>
             <span>{person?.person.last_name.substr(0, 1)}.</span>
             </div>
-            </>
+            </div>
         ))
     }
 
@@ -47,7 +51,7 @@ const ChatFeed = (props) => {
         })
     }
 
-    if(!chat) return <div><h3>&nbsp; Loading...</h3></div>;
+    if(!chat) return <div class='waiting'><span>&nbsp; Waiting for a chat...</span></div>;
 
     return (
         <div className='chat-feed'>
