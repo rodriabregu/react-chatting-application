@@ -20,8 +20,8 @@ const ChatFeed = (props) => {
                 float: isMyMessage ? 'right' : 'left',
                 backgroundImage: `url(${person?.person?.avatar})`
             }}>
-            <span className='name-form-img'>{person?.person.first_name}&nbsp;</span>
-            <span>{person?.person.last_name.substr(0, 1)}.</span>
+            {/* <span className='name-form-img'>{person?.person.first_name}&nbsp;</span>
+            <span>{person?.person.last_name.substr(0, 1)}.</span> // Se superpone los nombres */   } 
             </div>
             </div>
         ))

@@ -32,6 +32,7 @@ const MessageForm = (props) => {
         value={value}
         onChange={handleChange}
         onSubmit={handleSubmit}
+        autoComplete='off'
         />
         <label htmlFor='upload-button'>
             <span className='image-button'>
