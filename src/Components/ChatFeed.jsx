@@ -12,7 +12,7 @@ const ChatFeed = (props) => {
 
     const renderReadReceipts = (message, isMyMessage) => {
         return chat.people.map((person, index) => person.last_read === message.id && (
-            <div>
+            <>
             <div 
             key={`read_${index}`}
             className='read-receipt'
@@ -23,7 +23,7 @@ const ChatFeed = (props) => {
             {/* <span className='name-form-img'>{person?.person.first_name}&nbsp;</span>
             <span>{person?.person.last_name.substr(0, 1)}.</span> // Se superpone los nombres */   } 
             </div>
-            </div>
+            </>
         ))
     }
 

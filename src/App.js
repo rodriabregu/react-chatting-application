@@ -5,7 +5,7 @@ import './App.css'
 
 const App = () => {
     return (
-        <div>
+        <>
         {
         !localStorage.getItem('username') || !localStorage.getItem('password') ?
         <Lobby />
@@ -18,7 +18,7 @@ const App = () => {
         renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
         />
         }
-        </div>
+        </>
     )
 }
 
